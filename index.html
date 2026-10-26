@@ -1,0 +1,629 @@
+
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jérémy Sabadie · Portfolio & Homelab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== EN-TÊTE ==================== -->
+
+    <header class="top">
+
+        <a class="identity" href="#accueil">
+            <b class="logo">JS</b>
+            <span>
+                <strong>Jérémy Sabadie</strong>
+                <small>Développeur Full Stack · Test Analyst</small>
+            </span>
+        </a>
+
+        <nav>
+            <a class="active" href="#accueil">Accueil</a>
+            <a href="#projets">Projets</a>
+            <a href="#infra">Infrastructure</a>
+            <a href="#apropos">Expérience</a>
+        </nav>
+
+        <button id="theme" class="theme"
+                aria-label="Changer le thème">☼</button>
+
+    </header>
+
+    <main>
+
+        <!-- ==================== PRÉSENTATION ==================== -->
+
+        <section id="accueil" class="hero">
+
+            <div class="hero-copy">
+
+                <h1>
+    De l'idée au produit :<br>
+    <em>concevoir, développer, tester et déployer</em>
+</h1>
+
+<button type="button" class="ai-policy-link" id="open-ai-policy">
+    💡 Ma démarche d'utilisation de l'IA ↗
+</button>
+
+
+                <p>
+                    Construction par conception, développement, tests automatisés
+                    et déploiement d’applications web modernes, avec une approche
+                    qualité et une infrastructure maîtrisée.
+                </p>
+
+                <div class="chips">
+                    <span>☕ Java</span>
+                    <span>🟢 Spring Boot</span>
+                    <span>🅰 Angular</span>
+                    <span>🎭 Playwright</span>
+                    <span>🐳 Docker</span>
+                    <span>◉ CI/CD</span>
+                </div>
+
+            </div>
+
+            <blockquote>
+    ❝ Des applications réelles,<br>
+    conçues, développées, testées et déployées par mes soins,<br>
+    sur une infrastructure personnelle auto-hébergée.
+</blockquote>
+
+        </section>
+
+        <!-- ==================== APPLICATIONS ==================== -->
+
+        <section id="projets" class="panel">
+
+            <div class="section-head">
+
+                <h2>
+                    <span class="symbol">⬡</span>
+                    Mes applications
+                </h2>
+
+                <a class="outline" href="#projets">
+                    Voir toutes les applications →
+                </a>
+
+            </div>
+
+            <div class="projects">
+
+                <!-- ---------- MY POPOTE ---------- -->
+
+                <article class="project">
+
+                    <div class="project-title">
+
+                        <span class="project-icon">🍎</span>
+
+                        <div>
+                            <h3>
+                                My Popote
+                                <span class="status">● En ligne</span>
+                            </h3>
+                            <p>Gestion des repas et des courses</p>
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="preview popote">
+
+                            <div class="fakebar">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="fake-title">
+                                My Popote
+                                <span>Recettes · Planning</span>
+                            </div>
+
+                            <div class="food-grid">
+
+                                <div>
+                                    🥗
+                                    <small>Salades</small>
+                                </div>
+
+                                <div>
+                                    🍝
+                                    <small>Recettes</small>
+                                </div>
+
+                                <div>
+                                    🍲
+                                    <small>Menus</small>
+                                </div>
+
+                            </div>
+
+                            <div class="fake-line"></div>
+                            <div class="fake-line short"></div>
+
+                        </div>
+
+                        <ul>
+                            <li>Menus et recettes</li>
+                            <li>Planification semaine</li>
+                            <li>Liste de courses</li>
+                            <li>Budget</li>
+                            <li>Export / Impression</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="chips">
+                        <span>Angular 19</span>
+                        <span>Spring Boot 3</span>
+                        <span>MariaDB</span>
+                        <span>Docker</span>
+                    </div>
+
+                    <div class="actions">
+
+                        <a
+                            class="primary"
+                            href="https://my-popote.duckdns.org"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Ouvrir l’application ↗
+                        </a>
+
+                        <a
+                            href="https://github.com/Jeremy-Sabadie/my_popote"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            ◉ Code source
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- ---------- PRODUCTPULSE ---------- -->
+
+                <article class="project">
+
+                    <div class="project-title">
+
+                        <span class="project-icon">🗨️</span>
+
+                        <div>
+                            <h3>
+                                ProductPulse
+                                <span class="status">● En ligne</span>
+                            </h3>
+                            <p>Collecte et suivi des retours utilisateurs</p>
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="preview pulse">
+
+                            <aside>
+                                PRODUCTPULSE
+                                <hr>
+                                Dashboard<br>
+                                Retours<br>
+                                Modération<br>
+                                Tickets
+                            </aside>
+
+                            <div class="pulse-main">
+
+                                <strong>Retours utilisateurs</strong>
+
+                                <div class="pulse-item">
+                                    Suggestion
+                                    <span>À qualifier</span>
+                                </div>
+
+                                <div class="pulse-item">
+                                    Amélioration
+                                    <span>Validé</span>
+                                </div>
+
+                                <div class="pulse-item">
+                                    Signalement
+                                    <span>À traiter</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li>Avis et suggestions</li>
+                            <li>Modération</li>
+                            <li>Votes (admin)</li>
+                            <li>Conversion en tickets</li>
+                            <li>Suivi et historique</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="chips">
+                        <span>Angular 22</span>
+                        <span>Spring Boot 4.1</span>
+                        <span>MariaDB</span>
+                        <span>GitHub Issues</span>
+                    </div>
+
+                    <div class="actions">
+
+                        <a
+                            class="primary"
+                            href="https://my-popote.duckdns.org/productpulse/"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Ouvrir l’application ↗
+                        </a>
+
+                        <a
+                            href="https://github.com/Jeremy-Sabadie/productPulse"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            ◉ Code source
+                        </a>
+
+                        <a
+                            href="https://github.com/Jeremy-Sabadie/productPulse/actions"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            ⚙ Tests / CI
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== À PROPOS ==================== -->
+
+        <section id="apropos" class="panel about">
+
+            <div>
+
+                <h2>
+                    <span class="symbol">●</span>
+                    À propos
+                </h2>
+
+                <h3>Développeur Full Stack & Test Analyst</h3>
+
+                <p>
+                    J'aime construire des produits numériques de bout en bout :
+                    partir d'un besoin, imaginer une solution, la concevoir,
+                    la développer, la tester et la déployer.
+
+                    Cette approche s'appuie sur les compétences acquises au cours
+                    de mes formations, de mes expériences professionnelles et
+                    de mes projets personnels, enrichies par une veille
+                    technique régulière.
+
+                    J'intègre les bonnes pratiques de qualité logicielle
+                    (TDD, tests automatisés, CI/CD) à chaque étape
+                    du développement.
+                </p>
+
+                <p>
+                    <strong>Expérience professionnelle — CGI</strong><br>
+                    Développement d'applications Java / Angular,
+                    puis qualification logicielle et gestion des tests
+                    avec Squash TM sur un projet bancaire.
+                </p>
+
+                <p>
+                    <strong>Formation — Concepteur Développeur d'Applications</strong><br>
+                    Titre professionnel RNCP niveau 6 (équivalent bac +3/4).
+                </p>
+
+                <div class="actions">
+<a
+    class="primary"
+    href="https://www.linkedin.com/in/sabadie/"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Me contacter
+</a>
+
+                    <a
+                        href="https://github.com/Jeremy-Sabadie"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Mon GitHub ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- ---------- COMPÉTENCES ET MÉTHODE ---------- -->
+
+            <div class="method">
+
+                <div>
+                    <b>〈/〉</b>
+                    <p>
+                        <strong>Développement full stack</strong>
+                        <small>Java · Spring Boot · Angular · SQL</small>
+                    </p>
+                </div>
+
+                <div>
+                    <b>✓</b>
+                    <p>
+                        <strong>Qualité et tests</strong>
+                        <small>
+                            TDD · JUnit 5 · Mockito · Playwright · Squash TM
+                        </small>
+                    </p>
+                </div>
+
+                <div>
+                    <b>⬡</b>
+                    <p>
+                        <strong>Déploiement et infrastructure</strong>
+                        <small>
+                            Docker · Reverse proxy · Monitoring · Sauvegardes
+                        </small>
+                    </p>
+                </div>
+
+              
+
+            </div>
+
+        </section>
+
+        <!-- ==================== INFRASTRUCTURE REPLIABLE ==================== -->
+
+        <details id="infra" class="infra-details">
+
+            <summary class="infra-toggle">
+                <span class="infra-toggle-label">
+                    ▤ Mon infrastructure personnelle
+                </span>
+                <span class="infra-toggle-hint">
+                    VPS OVH · Services auto-hébergés · Supervision
+                </span>
+                <span class="infra-toggle-chevron" aria-hidden="true">⌄</span>
+            </summary>
+
+            <!-- ==================== INFRASTRUCTURE ==================== -->
+
+            <section class="panel">
+
+                <div class="section-head">
+
+                    <div>
+                        <h2>
+                            <span class="symbol">▤</span>
+                            Mon infrastructure
+                        </h2>
+
+                        <p>
+                            VPS OVH — Services auto-hébergés et supervision
+                        </p>
+                    </div>
+
+                    <span class="outline muted-btn">
+                        Infrastructure personnelle
+                    </span>
+
+                </div>
+
+                <div class="services">
+
+                    <div>
+                        <b>☁</b>
+                        <strong>MyTransfert</strong>
+                        <small>SFTPGo</small>
+                    </div>
+
+                    <div>
+                        <b>▦</b>
+                        <strong>Rappel RDV</strong>
+                        <small>:8083</small>
+                    </div>
+
+                    <div>
+                        <b>🤖</b>
+                        <strong>IA locale</strong>
+                        <small>:8087</small>
+                    </div>
+
+                    <div>
+                        <b>▤</b>
+                        <strong>Paperless</strong>
+                        <small>:8085</small>
+                    </div>
+
+                    <div>
+                        <b>◉</b>
+                        <strong>Monitoring</strong>
+                        <small>Uptime Kuma</small>
+                    </div>
+
+                    <div>
+                        <b>➤</b>
+                        <strong>Notifications</strong>
+                        <small>ntfy</small>
+                    </div>
+
+                    <div>
+                        <b>▣</b>
+                        <strong>Administration</strong>
+                        <small>Portainer</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================== SUPERVISION ==================== -->
+
+            <div class="system-grid">
+
+                <!-- ---------- ÉTAT DU SYSTÈME ---------- -->
+
+                <section class="panel">
+
+                    <h3>⚙ État du système</h3>
+
+                    <p class="note">
+                        Supervision du VPS OVH. Mesures temps réel à raccorder
+                        au déploiement.
+                    </p>
+
+                    <div class="metrics">
+
+                        <div>
+                            <strong>CPU</strong>
+                            <span>—</span>
+                            <i></i>
+                        </div>
+
+                        <div>
+                            <strong>RAM</strong>
+                            <span>—</span>
+                            <i></i>
+                        </div>
+
+                        <div>
+                            <strong>Stockage</strong>
+                            <span>—</span>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ---------- DISPONIBILITÉ ---------- -->
+
+                <section class="panel">
+
+                    <h3>▥ Disponibilité</h3>
+
+                    <p class="note">
+                        Données Uptime Kuma à connecter
+                    </p>
+
+                    <div class="availability">
+
+                        <div>
+                            <b>—</b>
+                            <small>services en ligne</small>
+                        </div>
+
+                        <div>
+                            <b>—</b>
+                            <small>hors ligne</small>
+                        </div>
+
+                        <div>
+                            <b>—</b>
+                            <small>disponibilité</small>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </details>
+
+    </main>
+
+    <!-- ==================== PIED DE PAGE ==================== -->
+
+    <footer>
+
+        <b class="logo">JS</b>
+
+        <strong>Jérémy Sabadie</strong>
+
+        <span>Portfolio & Homelab · 2026</span>
+
+        <a
+            href="https://github.com/Jeremy-Sabadie"
+            target="_blank"
+            rel="noopener"
+        >
+            GitHub ↗
+        </a>
+
+        <a href="#accueil">↑</a>
+
+    </footer>
+
+<!-- Fenêtre popup : politique d'utilisation de l'IA -->
+<dialog id="ai-policy-modal" class="ai-modal"
+        aria-labelledby="ai-modal-title">
+
+    <div class="ai-modal-header">
+        <h2 id="ai-modal-title">
+            💡 Ma démarche d'utilisation de l'IA
+        </h2>
+
+        <button type="button"
+                class="ai-modal-close"
+                id="close-ai-policy"
+                aria-label="Fermer la fenêtre">
+            ✕
+        </button>
+    </div>
+
+    <p class="ai-modal-subtitle">
+        Transparence sur la réalisation de mes projets
+    </p>
+
+    <p class="ai-modal-text">
+        En complément de mes connaissances résultantes de mes
+        formations, expériences professionnelles et personnelles,
+        j'utilise l'IA comme assistant afin d'augmenter ma
+        productivité tout en continuant d'apprendre et progresser ;
+        conception, décisions et validation sous ma responsabilité
+        ainsi que la validation des éléments de sécurité.
+    </p>
+
+    <div class="ai-modal-footer">
+        <button type="button"
+                class="ai-modal-dismiss"
+                id="dismiss-ai-policy">
+            Fermer
+        </button>
+    </div>
+</dialog>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
