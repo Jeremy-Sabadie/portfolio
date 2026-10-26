@@ -1,0 +1,87 @@
+.cv-container { max-width: 1000px; padding: 28px 20px 70px; }
+.cv-top { max-width: 1000px; }
+.cv-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; color: #a8bdd7; }
+.cv-download { background: linear-gradient(120deg,#0789f5,#3461f5); color: white; padding: 12px 18px; border-radius: 9px; font-size: 14px; font-weight: 600; }
+.cv-sheet { background: #0b1d31; border: 1px solid #245076; border-radius: 20px; padding: 45px 50px; box-shadow: 0 18px 60px #0004; }
+.cv-sheet section + section { margin-top: 30px; padding-top: 24px; border-top: 1px solid #23415d; }
+.cv-intro h1 { font-size: clamp(34px,5vw,50px); margin: 5px 0; color: #fff; }
+.cv-intro h2 { font-size: 19px; color: #54b8ff; margin: 8px 0 20px; }
+.cv-eyebrow { color: #7cbfff; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; font-weight: 700; }
+.cv-sheet h3 { color: #70c4ff; font-size: 17px; margin: 0 0 17px; }
+.cv-sheet p { color: #c7d9ed; line-height: 1.65; font-size: 14px; margin: 8px 0; }
+.cv-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+.cv-links a { color: #70c4ff; font-size: 13px; }
+.cv-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.cv-grid strong, .cv-entry strong { color: #f2f7ff; }
+.cv-entry + .cv-entry { margin-top: 18px; }
+.cv-entry-head { display: flex; justify-content: space-between; gap: 15px; }
+.cv-entry-head span { color: #9cb4cf; font-size: 13px; white-space: nowrap; }
+@media(max-width:600px) {
+  .cv-sheet { padding: 25px 20px; }
+  .cv-grid { grid-template-columns: 1fr; }
+  .cv-entry-head { flex-direction: column; gap: 4px; }
+}
+@media print {
+  @page { size: A4; margin: 12mm; }
+  :root { color: #182b40; background: white; }
+  body { background: white; }
+  .cv-top, .cv-toolbar { display: none; }
+  .cv-container { max-width: none; padding: 0; }
+  .cv-sheet { border: 0; border-radius: 0; box-shadow: none; padding: 0; background: white; }
+  .cv-sheet h1, .cv-grid strong, .cv-entry strong { color: #182b40; }
+  .cv-sheet h2, .cv-sheet h3, .cv-eyebrow, .cv-links a { color: #175c9a; }
+  .cv-sheet p, .cv-entry-head span { color: #33465a; }
+  .cv-sheet section + section { margin-top: 16px; padding-top: 12px; border-color: #dce5ed; }
+  .cv-sheet section { break-inside: avoid; }
+}
+
+/* Photo du CV */
+.cv-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cv-photo {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #348cff;
+}
+
+@media (max-width: 600px) {
+  .cv-heading { gap: 12px; }
+  .cv-photo { width: 85px; height: 85px; }
+  .cv-heading h1 { font-size: 27px; }
+}
+
+/* Centrage du CV sur ordinateur */
+.cv-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cv-photo {
+  border: none;
+}
+
+/* Corriger le décalage hérité du portfolio */
+body > main.cv-container {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px 20px 70px;
+}
+
+@media print {
+  @page { size: A4; margin: 8mm; }
+
+  .cv-sheet {
+    zoom: 0.82;
+  }
+}
