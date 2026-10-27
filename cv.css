@@ -159,3 +159,14 @@ html { scroll-behavior: smooth; }
 @media print {
   .cv-sommaire { display: none; }
 }
+
+/* Pyrénées — en-tête du CV web */
+@media screen {
+  .cv-intro {
+    background:
+      linear-gradient(90deg, rgba(7, 25, 45, .96), rgba(7, 25, 45, .60)),
+      url("assets/pyrenees.jpg") center 45% / cover no-repeat;
+    border-radius: 14px;
+    padding: 24px;
+  }
+}

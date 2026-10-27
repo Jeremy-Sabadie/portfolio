@@ -1058,3 +1058,31 @@ body.light { filter: invert(.88) hue-rotate(170deg); }
         font-size: 14px;
     }
 }
+
+/* Pyrénées — bandeau supérieur du portfolio */
+body:not(:has(.cv-container)) > .top {
+  background:
+    linear-gradient(90deg, rgba(5, 20, 38, .95), rgba(5, 20, 38, .65)),
+    url("assets/pyrenees.jpg") center 45% / cover no-repeat;
+}
+
+/* Pyrénées — photographie dans l'accueil du portfolio */
+body:not(:has(.cv-container)) > .top {
+  background: #061b30;
+}
+
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 20, 38, .96) 0%,
+      rgba(5, 20, 38, .85) 40%,
+      rgba(5, 20, 38, .35) 100%
+    ),
+    url("assets/pyrenees.jpg") center 48% / cover no-repeat;
+}
+
+/* Supprime les anciens effets graphiques qui masquent la photo */
+.hero::before {
+  display: none;
+}
