@@ -1067,9 +1067,7 @@ body:not(:has(.cv-container)) > .top {
 }
 
 /* Pyrénées — photographie dans l'accueil du portfolio */
-body:not(:has(.cv-container)) > .top {
-  background: #061b30;
-}
+/* Le bandeau conserve sa photographie définie plus haut. */
 
 .hero {
   background:
