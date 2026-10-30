@@ -1373,3 +1373,49 @@ body:not(:has(.cv-container)) > .top {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Compétences humaines — portfolio */
+.human-skills {
+  grid-column: 1 / -1;
+  padding: 20px;
+  background: #0b1c2b;
+  border: 1px solid #24516f;
+  border-radius: 14px;
+}
+.human-skills h3 {
+  margin: 0 0 15px;
+  color: #f0f7ff;
+}
+.human-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.human-skills-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 9px;
+  padding: 18px 12px;
+  background: #102a40;
+  border: 1px solid #24516f;
+  border-radius: 10px;
+  min-width: 0;
+}
+.human-skills-grid .human-icon { font-size: 25px; }
+.human-skills-grid strong { color: #fff; }
+.human-skills-grid small {
+  color: #b4c7d9;
+  line-height: 1.5;
+}
+.human-skills > p {
+  margin-bottom: 0;
+  color: #b4c7d9;
+  font-size: 12px;
+}
+@media (max-width: 720px) {
+  .human-skills-grid { grid-template-columns: 1fr; }
+  .human-skills { padding: 15px; }
+}
