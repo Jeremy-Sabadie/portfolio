@@ -1098,3 +1098,215 @@ body:not(:has(.cv-container)) > .top {
     height: 100%;
     object-fit: contain;
 }
+
+/* Technologies organisées par domaine */
+.skills-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.skills-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skills-row > strong {
+    flex: 0 0 76px;
+    color: #91bfe5;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.skills-row .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .skills-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .skills-row > strong {
+        flex: none;
+    }
+}
+
+
+/* Présentation compacte des compétences */
+.hero .skills-groups {
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.hero .skills-row {
+    gap: 8px;
+}
+
+.hero .skills-row .chips {
+    margin: 0;
+    gap: 6px;
+}
+
+@media (max-width: 600px) {
+    .hero .skills-row {
+        gap: 3px;
+    }
+
+    .hero .skills-row > strong {
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .hero .skills-row .chips {
+        gap: 5px;
+    }
+}
+
+/* Responsive téléphone — mise en page sans débordement */
+@media (max-width: 600px) {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        margin: 0;
+    }
+
+    .top, main, footer {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .top nav {
+        order: 3;
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+    }
+
+    .top nav a {
+        flex-shrink: 0;
+    }
+
+    main > *, .panel, .hero, .hero-copy {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 16px;
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(24px, 7vw, 32px);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-copy, .hero .skills-groups,
+    .hero .skills-row .chips, .hero blockquote {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .hero blockquote {
+        margin: 0;
+    }
+}
+
+
+/* FIX FINAL — affichage téléphone uniquement */
+@media screen and (max-width: 720px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: clip;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  .top, main, footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .top nav {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .hero, .panel, #apropos {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 14px;
+  }
+
+  .hero-copy, .hero blockquote,
+  .hero .skills-groups, .skills-row,
+  .skills-row .chips {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(23px, 6.5vw, 30px);
+    overflow-wrap: anywhere;
+  }
+
+  .projects, .project, .project-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
