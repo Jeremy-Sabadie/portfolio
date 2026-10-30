@@ -1340,3 +1340,36 @@ body:not(:has(.cv-container)) > .top {
         white-space: nowrap;
     }
 }
+
+/* Infrastructure & supervision : panneau unique */
+.system-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.system-grid > .panel {
+  min-width: 0;
+}
+
+.system-grid .availability {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.system-grid .availability > div {
+  min-width: 0;
+  justify-content: center;
+}
+
+.system-grid .availability strong {
+  font-size: 14px;
+}
+
+.system-grid .availability small {
+  line-height: 1.5;
+}
+
+/* Adaptation mobile */
+@media (max-width: 720px) {
+  .system-grid .availability {
+    grid-template-columns: 1fr;
+  }
+}
