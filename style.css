@@ -1419,3 +1419,14 @@ body:not(:has(.cv-container)) > .top {
   .human-skills-grid { grid-template-columns: 1fr; }
   .human-skills { padding: 15px; }
 }
+
+/* AUDIT RH : responsive À propos */
+@media (max-width: 720px) {
+  #apropos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #apropos > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
