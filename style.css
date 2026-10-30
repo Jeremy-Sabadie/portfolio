@@ -1310,3 +1310,33 @@ body:not(:has(.cv-container)) > .top {
     max-width: 100%;
   }
 }
+
+/* Compacter les badges DEV sur ordinateur */
+@media (min-width: 1101px) {
+    .hero .skills-row:first-child .chips {
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .hero .skills-row:first-child .chip {
+        padding: 5px 8px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
+
+/* Badges DEV : une ligne si l'espace est suffisant */
+@media (min-width: 721px) {
+    .hero .skills-row:first-child .chips {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: auto;
+    }
+
+    .hero .skills-row:first-child .chip {
+        padding: 4px 7px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
