@@ -272,3 +272,32 @@ html { scroll-behavior: smooth; }
     color: #175c9a !important;
   }
 }
+
+/* FIX-04 — Espacements PDF après ajout du contexte des compétences */
+@media print {
+  .skills-context p {
+    margin: 1px 0 !important;
+    line-height: 1.15 !important;
+  }
+
+  #competences + section {
+    margin-top: 1px !important;
+    padding-top: 1px !important;
+  }
+
+  .cv-sheet section + section {
+    margin-top: 1px;
+    padding-top: 1px;
+  }
+
+  .cv-entry + .cv-entry {
+    margin-top: 1px;
+  }
+}
+
+.cv-context-print { display: none; }
+
+@media print {
+  .cv-context-web { display: none !important; }
+  .cv-context-print { display: block !important; }
+}
