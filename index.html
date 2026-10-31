@@ -303,6 +303,32 @@
                         </a>
                     </p>
 
+<div class="qa-case-study">
+    <h4>Étude de cas QA — Modération des avis</h4>
+    <p>
+        <strong>Objectif :</strong> sécuriser les accès administrateur
+        et vérifier le parcours de modération.
+    </p>
+    <p>
+        <strong>Approche :</strong> tests API Playwright (401, 403, 200),
+        scénarios UI avec API simulée (approbation, rejet, affichage et erreurs),
+        et tests d'intégration JUnit sur les règles de modération.
+    </p>
+    <p>
+        <strong>Validation :</strong> scénarios et assertions vérifiés dans le code.
+        Dernière exécution locale des tests d'intégration bloquée
+        par l'authentification MariaDB.
+    </p>
+</div>
+
+<div id="productpulse-qa-case">
+    <h4>Étude de cas QA — Modération des avis</h4>
+    <p><strong>Objectif :</strong> sécuriser les accès administrateur et fiabiliser la modération.</p>
+    <p><strong>Tests :</strong> API Playwright (401/403/200), interface avec API simulée
+    (approbation, rejet, affichage, erreurs) et scénarios d'intégration JUnit
+    (persistance des statuts et prévention d'une double modération).</p>
+</div>
+
 <div class="actions" id="productpulse-qa-proofs">
     <a href="https://github.com/Jeremy-Sabadie/productPulse/blob/main/frontEnd/tests/api/feedback-admin.spec.ts" target="_blank" rel="noopener noreferrer">Tests API Playwright ↗</a>
     <a href="https://github.com/Jeremy-Sabadie/productPulse/blob/main/backend/src/test/java/com/product_pulse/product_pulseAPI/feedback/service/FeedbackServiceTest.java" target="_blank" rel="noopener noreferrer">Tests backend JUnit ↗</a>
