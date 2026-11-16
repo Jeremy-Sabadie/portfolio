@@ -15,3 +15,23 @@ if (aiModal && aiOpen) {
         if (event.target === aiModal) aiModal.close();
     });
 }
+
+// SUPERVISEME CAROUSEL V2
+document.querySelectorAll('.superviseme-carousel').forEach(carousel => {
+    const slides = carousel.querySelector('.superviseme-slides');
+    const counter = carousel.querySelector('.superviseme-counter');
+    const images = slides.querySelectorAll('img');
+    let index = 0;
+
+    function show(next) {
+        index = (next + images.length) % images.length;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        counter.textContent = `${index + 1} / ${images.length}`;
+    }
+
+    carousel.querySelector('.superviseme-prev')
+        .addEventListener('click', () => show(index - 1));
+
+    carousel.querySelector('.superviseme-next')
+        .addEventListener('click', () => show(index + 1));
+});
