@@ -432,13 +432,12 @@
                     <div class="actions">
 
                         <a
-                            class="primary"
+                            class="primary productpulse-open"
                             href="https://my-popote.duckdns.org/productpulse/"
                             target="_blank"
                             rel="noopener"
-                        >
-                            Ouvrir l’application (connexion My Popote requise) ↗
-                        </a>
+                        >Ouvrir ProductPulse ↗</a>
+<small class="productpulse-login-note">Connexion My Popote requise</small>
 
                         <a
                             href="https://github.com/Jeremy-Sabadie/productPulse"
@@ -892,6 +891,29 @@
 </dialog>
 
 <script src="script.js"></script>
+
+
+<button id="back-to-top" type="button"
+ aria-label="Revenir en haut de la page"
+ title="Retour en haut">↑</button>
+<script>
+(() => {
+  const btn = document.getElementById('back-to-top');
+  const refresh = () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  };
+  window.addEventListener('scroll', refresh, {passive:true});
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches ? 'instant' : 'smooth'
+    });
+  });
+  refresh();
+})();
+</script>
 
 </body>
 
