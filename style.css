@@ -1912,3 +1912,11 @@ body:not(:has(.cv-container)) > .top {
   outline: 2px solid #1685f5;
   outline-offset: 3px;
 }
+
+/* Mobile : CTA contact visible sans défilement du menu */
+@media (max-width: 720px) {
+  .top nav .nav-contact-cta {
+    order: -1;
+    flex-shrink: 0;
+  }
+}
