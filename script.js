@@ -35,3 +35,46 @@ document.querySelectorAll('.superviseme-carousel').forEach(carousel => {
     carousel.querySelector('.superviseme-next')
         .addEventListener('click', () => show(index + 1));
 });
+
+// Portfolio contact form
+(() => {
+  const modal = document.getElementById('contact-modal');
+  const open = document.getElementById('open-contact');
+  const close = document.getElementById('close-contact');
+  const form = document.getElementById('portfolio-contact-form');
+  const feedback = document.getElementById('contact-feedback');
+
+  if (!modal || !open || !close || !form || !feedback) return;
+
+  open.addEventListener('click', () => modal.showModal());
+  close.addEventListener('click', () => modal.close());
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) modal.close();
+  });
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const submit = form.querySelector('[type="submit"]');
+    submit.disabled = true;
+    feedback.textContent = 'Envoi en cours…';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Submission failed');
+
+      form.reset();
+      feedback.textContent = 'Message envoyé avec succès. Merci !';
+    } catch (error) {
+      feedback.textContent =
+        "L'envoi a échoué. Réessayez ou écrivez à contact@atelier-du-dev.fr.";
+    } finally {
+      submit.disabled = false;
+    }
+  });
+})();

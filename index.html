@@ -569,14 +569,9 @@
                 </p>
 
                 <div class="actions">
-<a
-    class="primary"
-    href="https://www.linkedin.com/in/sabadie/"
-    target="_blank"
-    rel="noopener noreferrer"
->
+<button type="button" class="primary contact-trigger" id="open-contact">
     Me contacter
-</a>
+</button>
 <a href="cv.html">Voir mon CV</a>
 
                     <a
@@ -844,7 +839,58 @@
     </div>
 </dialog>
 
-    <script src="script.js"></script>
+
+<!-- Formulaire de contact -->
+<dialog id="contact-modal" class="contact-modal"
+        aria-labelledby="contact-modal-title">
+  <div class="contact-modal-header">
+    <div>
+      <h2 id="contact-modal-title">Me contacter</h2>
+      <p>Une opportunité professionnelle ? Échangeons !</p>
+    </div>
+    <button type="button" id="close-contact"
+            class="contact-close" aria-label="Fermer">×</button>
+  </div>
+
+  <form id="portfolio-contact-form"
+        action="https://formspree.io/f/xwlobnan"
+        method="POST">
+    <label for="contact-name">Nom et prénom *</label>
+    <input id="contact-name" name="name" type="text"
+           autocomplete="name" required maxlength="120">
+
+    <label for="contact-email">Adresse e-mail *</label>
+    <input id="contact-email" name="email" type="email"
+           autocomplete="email" required maxlength="254">
+
+    <label for="contact-company">Entreprise</label>
+    <input id="contact-company" name="company" type="text"
+           autocomplete="organization" maxlength="120">
+
+    <label for="contact-message">Votre message *</label>
+    <textarea id="contact-message" name="message"
+              rows="5" required maxlength="5000"></textarea>
+
+    <div class="contact-honeypot" aria-hidden="true">
+      <label for="contact-website">Site web</label>
+      <input id="contact-website" name="_gotcha" type="text"
+             tabindex="-1" autocomplete="off">
+    </div>
+
+    <p id="contact-feedback" role="status" aria-live="polite"></p>
+
+    <button type="submit" class="contact-submit">
+      Envoyer mon message
+    </button>
+  </form>
+
+  <p class="contact-privacy">
+    Vos informations sont utilisées uniquement pour répondre à votre
+    demande. Envoi traité par Formspree.
+  </p>
+</dialog>
+
+<script src="script.js"></script>
 
 </body>
 

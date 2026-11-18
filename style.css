@@ -1744,3 +1744,146 @@ body:not(:has(.cv-container)) > .top {
     text-wrap: balance;
   }
 }
+
+
+/* Portfolio contact modal — charte graphique du site */
+
+.actions button.contact-trigger {
+  padding: 12px 13px;
+  border: 1px solid #1685f5;
+  border-radius: 9px;
+  background: linear-gradient(120deg, #0789f5, #3461f5);
+  color: #fff;
+  box-shadow: 0 0 16px #1375f477;
+  font-size: 12px;
+  line-height: normal;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.actions button.contact-trigger:hover,
+.contact-submit:hover {
+  filter: brightness(1.15);
+}
+
+.contact-modal {
+  width: min(520px, calc(100% - 32px));
+  max-height: 85vh;
+  margin: auto;
+  padding: 28px;
+  overflow-y: auto;
+  border: 1px solid #4a9ce8;
+  border-radius: 18px;
+  background: #102338;
+  color: #d7e8f7;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .55);
+}
+
+.contact-modal::backdrop {
+  background: rgba(2, 10, 22, .82);
+  backdrop-filter: blur(5px);
+}
+
+.contact-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.contact-modal-header h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.contact-modal-header p {
+  margin: 0;
+  color: #7fc8ff;
+  font-size: 13px;
+}
+
+.contact-close {
+  flex-shrink: 0;
+  padding: 7px 11px;
+  border: 1px solid #345b7a;
+  border-radius: 9px;
+  background: #172f49;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#portfolio-contact-form {
+  display: grid;
+  gap: 9px;
+}
+
+#portfolio-contact-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #d7e8f7;
+}
+
+#portfolio-contact-form input,
+#portfolio-contact-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 9px;
+  border: 1px solid #345b7a;
+  border-radius: 9px;
+  background: #0a1b2e;
+  color: #e9f1ff;
+  font: inherit;
+  font-size: 14px;
+}
+
+#portfolio-contact-form input:focus,
+#portfolio-contact-form textarea:focus {
+  outline: 2px solid #4a9ce8;
+  outline-offset: 2px;
+}
+
+.contact-submit {
+  padding: 12px 18px;
+  border: 1px solid #1685f5;
+  border-radius: 9px;
+  background: linear-gradient(120deg, #0789f5, #3461f5);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-submit:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.contact-privacy {
+  margin: 15px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #a9c5dc;
+}
+
+#contact-feedback {
+  margin: 0;
+  font-size: 14px;
+  color: #7fc8ff;
+}
+
+@media (max-width: 600px) {
+  .contact-modal {
+    padding: 20px;
+  }
+}
