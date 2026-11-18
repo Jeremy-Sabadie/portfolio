@@ -1534,3 +1534,199 @@ body:not(:has(.cv-container)) > .top {
         height: 220px;
     }
 }
+
+
+/* TEST COMPACT DESKTOP - PORTFOLIO */
+/* Réversible : sauvegarde style.css.avant-test-compact */
+
+@media screen and (min-width: 1101px) {
+
+  main {
+    gap: 10px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 300px);
+    align-items: center;
+    padding: 12px 18px;
+    gap: 10px 18px;
+  }
+
+  .hero-copy {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(23px, 2vw, 30px);
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 12px;
+    line-height: 1.35;
+    margin: 4px 0;
+  }
+
+  .hero blockquote {
+    max-width: 300px;
+    padding: 9px 11px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .hero .chips {
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  .hero .chips span {
+    padding: 3px 7px;
+  }
+
+  #projets {
+    padding: 12px 14px;
+  }
+
+  .projects {
+    gap: 10px;
+    align-items: start;
+  }
+
+  .project {
+    padding: 12px;
+  }
+
+  .superviseme-description {
+    margin: 7px 0 10px;
+    line-height: 1.4;
+  }
+
+  .superviseme-slides img {
+    height: 180px;
+  }
+
+  .superviseme-carousel-controls {
+    padding: 5px;
+  }
+
+  .project-content {
+    margin: 7px 0;
+  }
+
+  .project-content ul {
+    line-height: 1.45;
+  }
+
+  .project .chips {
+    margin: 6px 0;
+  }
+
+  .actions a {
+    padding: 7px 9px;
+  }
+}
+
+
+/* TEST BANDEAU DEUX COLONNES V2 */
+@media screen and (min-width: 1101px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 10px 20px;
+    align-items: start;
+    padding: 14px 20px;
+  }
+
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: none;
+  }
+
+  .hero blockquote {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 5px;
+  }
+
+  .hero p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .hero .skills-groups {
+    margin: 6px 0;
+  }
+
+  .hero .skills-row {
+    margin: 3px 0;
+  }
+
+  .hero .chips {
+    margin: 2px 0;
+    gap: 4px;
+  }
+
+  .hero .chips span {
+    padding: 3px 6px;
+  }
+
+  .hero .ai-policy-link {
+    margin: 5px 0;
+    padding: 7px 12px;
+  }
+}
+
+
+/* TEST HERO REORGANISE V3 */
+@media (min-width: 1101px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 12px 28px;
+    padding: 18px 24px;
+  }
+
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero-expertise {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .hero blockquote {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: end;
+    max-width: 100%;
+    padding: 6px 12px;
+  }
+
+  .hero-expertise .skills-groups {
+    margin: 0 0 10px;
+  }
+
+  .hero-expertise .skills-row {
+    margin: 5px 0;
+  }
+
+  .hero-expertise .skills-context p {
+    margin: 5px 0;
+  }
+}

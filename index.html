@@ -41,7 +41,7 @@
 
         <section id="accueil" class="hero">
 
-            <div class="hero-copy">
+            <div class="hero-copy"><div class="hero-intro">
 
                 <h1>
     De l'idée au produit :<br>
@@ -59,7 +59,11 @@
                     qualité et une expérience concrète du déploiement sur une infrastructure personnelle.
                 </p>
 
-                <div class="skills-groups">
+
+            </div></div>
+
+<div class="hero-expertise">
+<div class="skills-groups">
 
     <div class="skills-row">
         <strong>DEV</strong>
@@ -93,8 +97,8 @@
 
 </div>
 
-                <div class="skills-context"><p><strong>Chez CGI :</strong> Java, Angular, analyse fonctionnelle, conception et exécution de tests, Squash TM.</p><p><strong>Projets personnels — My Popote / ProductPulse :</strong> Spring Boot, Playwright, Postman, JUnit, Docker, GitHub Actions, CI/CD et déploiement VPS.</p></div>
-            </div>
+                <div class="skills-context"><p><strong>En milieu professionnel :</strong> Java, Angular, analyse fonctionnelle, conception et exécution de tests, Squash TM.</p><p><strong>Projets personnels — My Popote / ProductPulse :</strong> Spring Boot, Playwright, Postman, JUnit, Docker, GitHub Actions, CI/CD et déploiement VPS.</p></div>
+</div>
 
             <blockquote>
     ❝ Des applications réelles,<br>
@@ -166,7 +170,8 @@
                     </div>
 
                     <div class="project-content">
-                        <div class="superviseme-details">
+                        <details class="superviseme-details">
+    <summary>Voir les détails techniques</summary>
                             <strong>Fonctionnalités</strong>
                             <ul>
                                 <li>Gestion des clients, dossiers et tâches</li>
@@ -189,7 +194,7 @@
                                 <li>Master-Detail View</li>
                                 <li>Authentification JWT RSA et gestion des rôles</li>
                             </ul>
-                        </div>
+                        </details>
                     </div>
 
                     <div class="chips">
@@ -202,19 +207,25 @@
                     </div>
 
                     <div class="actions">
-                        <a href="https://github.com/Jeremy-Sabadie/SuperviseMe/actions"
-                           target="_blank" rel="noopener noreferrer">
-                            Voir la CI ↗
-                        </a>
-                        <a href="https://github.com/Jeremy-Sabadie/SuperviseMe/blob/develop/.github/workflows/ci.yml"
-                           target="_blank" rel="noopener noreferrer">
-                            Voir le fichier CI ↗
-                        </a>
-
                         <a class="primary"
                            href="https://demo.superviseme.atelier-du-dev.fr/login"
                            target="_blank" rel="noopener noreferrer">
                             Tester SuperviseMe ↗
+                        </a>
+
+                        <a href="https://github.com/Jeremy-Sabadie/SuperviseMe/actions"
+                           target="_blank" rel="noopener noreferrer">
+                            Voir les exécutions CI ↗
+                        </a>
+
+                        <a href="https://github.com/Jeremy-Sabadie/SuperviseMe/blob/develop/.github/workflows/ci.yml"
+                           target="_blank" rel="noopener noreferrer">
+                            Voir le workflow CI ↗
+                        </a>
+
+                        <a href="https://github.com/Jeremy-Sabadie/SuperviseMe/blob/develop/compose.ci.yaml"
+                           target="_blank" rel="noopener noreferrer">
+                            Voir la stack de test ↗
                         </a>
                     </div>
 
@@ -678,6 +689,13 @@
                 </div>
 
                 <div class="services">
+
+                    <div>
+                        <b>🏗️</b>
+                        <strong>SuperviseMe</strong>
+                        <small>SaaS artisans · Docker</small>
+                    </div>
+
 
                     <div>
                         <b>☁</b>
