@@ -1887,3 +1887,28 @@ body:not(:has(.cv-container)) > .top {
     padding: 20px;
   }
 }
+
+.top nav button.nav-contact-cta {
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  padding: 12px 13px;
+  border: 1px solid #456483;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.top nav button.nav-contact-cta:hover {
+  border-color: #1685f5;
+  color: #7fc8ff;
+}
+
+.top nav button.nav-contact-cta:focus-visible {
+  outline: 2px solid #1685f5;
+  outline-offset: 3px;
+}
