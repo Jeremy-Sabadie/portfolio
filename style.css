@@ -1915,10 +1915,7 @@ body:not(:has(.cv-container)) > .top {
 
 /* Mobile : CTA contact visible sans défilement du menu */
 @media (max-width: 720px) {
-  .top nav .nav-contact-cta {
-    order: -1;
-    flex-shrink: 0;
-  }
+
 }
 
 /* Correctif responsive mobile — 18/11/2026 */
@@ -2040,6 +2037,25 @@ body:not(:has(.cv-container)) > .top {
   }
 }
 
+/* MyDaily : capture adaptée à la largeur mobile */
+@media (max-width: 720px) {
+  .preview.mydaily-preview {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .preview.mydaily-preview img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 /* Navigation mobile compacte — correctif ciblé */
 @media screen and (max-width: 720px) {
   .top {
@@ -2056,14 +2072,11 @@ body:not(:has(.cv-container)) > .top {
   .top nav {
     order: 3;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
     min-width: 0;
     gap: 6px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
+    overflow: visible;
     padding: 4px 0 8px;
   }
 
