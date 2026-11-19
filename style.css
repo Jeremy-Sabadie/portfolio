@@ -2347,3 +2347,22 @@ body:not(:has(.cv-container)) > .top {
     font-size: 12px;
   }
 }
+
+/* Bouton retour en haut : texte visible */
+#back-to-top {
+    width: auto;
+    min-width: 48px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 25px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#back-to-top span {
+    font-size: 13px;
+    font-weight: 600;
+}

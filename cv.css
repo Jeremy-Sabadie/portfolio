@@ -301,3 +301,25 @@ html { scroll-behavior: smooth; }
   .cv-context-web { display: none !important; }
   .cv-context-print { display: block !important; }
 }
+
+/* Ajustement final : CV PDF sur une page A4 */
+@media print {
+  .cv-sheet {
+    zoom: 0.82;
+  }
+}
+/* Éviter une page blanche supplémentaire à l'impression */
+@media print {
+  html, body {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .cv-container,
+  .cv-sheet {
+    height: auto !important;
+    min-height: 0 !important;
+    break-after: auto !important;
+    page-break-after: auto !important;
+  }
+}
