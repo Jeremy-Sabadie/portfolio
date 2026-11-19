@@ -23,7 +23,12 @@
             </span>
         </a>
 
-        <nav>
+
+        <button class="mobile-menu-button" type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="mobile-main-nav">☰</button>
+        <nav id="mobile-main-nav">
             <a class="active" href="#accueil">Accueil</a>
             <a href="#projets">Projets</a>
             <a href="#infra">Infrastructure</a>
@@ -49,6 +54,15 @@
     <em>concevoir, développer, tester et déployer</em>
 </h1>
 
+
+<div class="mobile-recruiter-intro">
+  <p>QA Analyst · Conception, développement et qualité logicielle</p>
+  <div class="mobile-recruiter-actions">
+    <a class="primary" href="#projets">Voir mes projets</a>
+    <a class="outline" href="assets/cv-jeremy-sabadie.pdf"
+       target="_blank" rel="noopener">Mon CV ↗</a>
+  </div>
+</div>
 <button type="button" class="ai-policy-link" id="open-ai-policy">
     💡 Ma démarche d'utilisation de l'IA ↗
 </button>
@@ -915,6 +929,85 @@
 })();
 </script>
 
+
+<script>
+/* refonte-mobile-recruteur-2026 */
+(() => {
+  const mobile = window.matchMedia('(max-width: 720px)');
+  const nav = document.getElementById('mobile-main-nav');
+  const toggle = document.querySelector('.mobile-menu-button');
+
+  function closeMenu() {
+    nav.classList.remove('mobile-nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Ouvrir le menu');
+  }
+
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('mobile-nav-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+
+  nav.addEventListener('click', e => {
+    if (e.target.closest('a, button')) closeMenu();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  const moved = [];
+
+  function makeDetails(parent, elements, label) {
+    if (!elements.length) return;
+    const details = document.createElement('details');
+    details.className = 'mobile-collapsible';
+    const summary = document.createElement('summary');
+    summary.textContent = label;
+    details.append(summary);
+
+    const positions = elements.map(el => {
+      const placeholder = document.createComment('position-originale');
+      el.before(placeholder);
+      details.append(el);
+      return [el, placeholder];
+    });
+
+    positions[0][1].after(details);
+    moved.push({details, positions});
+  }
+
+  function update() {
+    closeMenu();
+
+    if (mobile.matches && !moved.length) {
+      document.querySelectorAll('.projects > .project').forEach(card => {
+        const elements = Array.from(card.children).filter(el =>
+          !el.classList.contains('project-title') &&
+          !el.classList.contains('actions')
+        );
+        makeDetails(card, elements, 'Voir la présentation et les preuves');
+      });
+
+      document.querySelectorAll('.hero-expertise').forEach(el => {
+        makeDetails(el.parentElement, [el], 'Compétences et technologies');
+      });
+    }
+
+    if (!mobile.matches && moved.length) {
+      moved.reverse().forEach(({details, positions}) => {
+        positions.forEach(([el, placeholder]) => placeholder.replaceWith(el));
+        details.remove();
+      });
+      moved.length = 0;
+    }
+  }
+
+  update();
+  mobile.addEventListener('change', update);
+})();
+</script>
 </body>
 
 </html>

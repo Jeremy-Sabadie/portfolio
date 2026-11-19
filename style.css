@@ -2156,3 +2156,194 @@ body:not(:has(.cv-container)) > .top {
 @media (prefers-reduced-motion: reduce) {
   #back-to-top { transition: none; }
 }
+
+/* refonte-mobile-recruteur-2026 */
+.mobile-menu-button,
+.mobile-recruiter-intro {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .top .identity {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .top .logo {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .top .identity strong {
+    font-size: 14px;
+  }
+
+  .top .identity small {
+    display: none;
+  }
+
+  .top .theme {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu-button {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #09213a;
+    color: #e9f1ff;
+    border: 1px solid #316184;
+    border-radius: 9px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .mobile-menu-button:focus-visible {
+    outline: 2px solid #65c7ff;
+    outline-offset: 2px;
+  }
+
+  .top nav#mobile-main-nav {
+    grid-column: 1 / -1;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    gap: 4px;
+    overflow: visible;
+    padding: 6px 0;
+  }
+
+  .top nav#mobile-main-nav.mobile-nav-open {
+    display: flex;
+  }
+
+  .top nav#mobile-main-nav a,
+  .top nav#mobile-main-nav button.nav-contact-cta {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  main {
+    padding: 10px 12px 0;
+    gap: 10px;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 18px 15px;
+    gap: 8px;
+  }
+
+  .hero h1 {
+    font-size: clamp(22px, 6vw, 28px);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .mobile-recruiter-intro {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mobile-recruiter-intro p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
+
+  .mobile-recruiter-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .mobile-recruiter-actions a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 9px;
+  }
+
+  .hero .hero-intro > p:not(.mobile-recruiter-intro p),
+  .hero > blockquote {
+    display: none;
+  }
+
+  .hero .ai-policy-link {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .hero .hero-expertise {
+    margin: 8px 0;
+  }
+
+  .panel, .project {
+    padding: 13px;
+  }
+
+  .projects {
+    gap: 10px;
+  }
+
+  .project-title {
+    margin-bottom: 8px;
+  }
+
+  .project-title h3 {
+    font-size: 17px;
+  }
+
+  .project-title p {
+    font-size: 13px;
+  }
+
+  .mobile-collapsible {
+    width: 100%;
+    min-width: 0;
+    margin: 8px 0;
+  }
+
+  .mobile-collapsible > summary {
+    cursor: pointer;
+    color: #8bd0ff;
+    border: 1px solid #295371;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .mobile-collapsible[open] > summary {
+    margin-bottom: 12px;
+  }
+
+  .project .actions {
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 8px;
+  }
+
+  .project .actions a {
+    max-width: 100%;
+    white-space: normal;
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
